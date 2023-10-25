@@ -30,6 +30,10 @@ openssl req \
 
   cp ../conf/default-ssl.conf /etc/apache2/sites-available/
 
+ # Sustituir cadena:
+ 
+  sed -i "s/PUT_YOUR_DOMAIN/$OPENSSL_COMMON_NAME/" /etc/apache2/sites-available/default-ssl.conf
+
  # Para habilitar el virtualhost copiado:
 
   a2ensite default-ssl.conf
@@ -42,10 +46,12 @@ openssl req \
 
   systemctl restart apache2
 
+
 # Configuramos que las peticiones a HTTP se redirijan a HTTPS
 # Copiar el archivo conf de VH para HTTP
 
 cp ../conf/000-default.conf /etc/apache2/sites-available/
+
 
 # Habilitamos el modulo rewrite Apache pueda hacer la redirección de HTTP a HTTPS
 
@@ -54,3 +60,5 @@ a2enmod rewrite
 # Reiniciamos el servicio de Apache
 
 systemctl restart apache2
+
+
