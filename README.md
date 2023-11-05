@@ -82,8 +82,6 @@ En la carpeta *scripts* debemos de tener un archivo **.env** donde estarán aloj
 
 ![](/Practica-01-04/images/variables.png)
 
-
-
 ### 3.1 Creación del certificado autofirmado
 
 haciendo uso del siguiente comando podemos realizar la creación del certificado autofirmado de una manera automatizada. 
