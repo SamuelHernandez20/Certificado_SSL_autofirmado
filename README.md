@@ -77,7 +77,7 @@ cp ../php/index.php /var/www/html
 
 En la carpeta *scripts* debemos de tener un archivo **.env** donde estarán alojadas las variables para automatizar la tarea de la emisión del certificado autofirmado:
 
-![](/Practica-01-04/images/estructura%20scripts.png)
+![](/Practica-01-04/images/estructurascripts.png)
 
 
 ![](/Practica-01-04/images/variables.png)
