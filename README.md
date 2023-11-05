@@ -11,7 +11,7 @@ Para esta practica habráque crear un certificado autofirmado por nosotros, sin 
 
 Primeramente empezaré configurando dentro de la una carpeta llamada *scripts*, 2 archivos **.sh** el primero será donde se realizará lo que concierne a la instalación de la pila **LAMP** (install_lamp.sh) y el segundo para la configuración y creación de **certificado** y la **clave privada** (setup_selfsigned_certificate.sh).
 
-![](/Practica-01-04/images/estructura%20scripts.png)
+![](/Practica-01-04/images/estructurascripts.png)
 
 ### 1.1 Configuraciones iniciales:
 
