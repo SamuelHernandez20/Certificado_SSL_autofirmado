@@ -11,7 +11,7 @@ Para esta practica habráque crear un certificado autofirmado por nosotros, sin 
 
 Primeramente empezaré configurando dentro de la una carpeta llamada *scripts*, 2 archivos **.sh** el primero será donde se realizará lo que concierne a la instalación de la pila **LAMP** (install_lamp.sh) y el segundo para la configuración y creación de **certificado** y la **clave privada** (setup_selfsigned_certificate.sh).
 
-![](/Practica-01-04/images/estructurascripts.png)
+![](images/estructurascripts.png)
 
 ### 1.1 Configuraciones iniciales:
 
@@ -59,7 +59,7 @@ apt install php libapache2-mod-php php-mysql -y
 
 Para automatizar esta tarea se puede realizar el copiado de la configuración hacia el **sites-available** (sitios disponibles):
 
-![](/Practica-01-04/images/default.png)
+![](images/default.png)
 
 ```
 cp ../conf/000-default.conf /etc/apache2/sites-available 
@@ -77,10 +77,10 @@ cp ../php/index.php /var/www/html
 
 En la carpeta *scripts* debemos de tener un archivo **.env** donde estarán alojadas las variables para automatizar la tarea de la emisión del certificado autofirmado:
 
-![](/Practica-01-04/images/estructurascripts.png)
+![](images/estructurascripts.png)
 
 
-![](/Practica-01-04/images/variables.png)
+![](images/variables.png)
 
 ### 3.1 Creación del certificado autofirmado
 
@@ -113,7 +113,7 @@ openssl req \
 
 Dentro de la carpeta *conf* tendremos otro archivo que será destinado a la configuración de un VirtualHost que permita a todas las direcciones navegar por **HTTP``S``** mediante el archivo por defecto que tiene apache para **SSL/TLS**.
  
-![](/Practica-01-04/images/ssl.png)
+![](images/ssl.png)
 
 Dentro de este archivo Configuraremos que el **SSL** este habilitado para el VirtualHost mediante **SSLEngine** puesto a **on**. 
 
@@ -121,7 +121,7 @@ Mediante el **SSLCertificateFile** se le estaria indicando la ruta donde esta al
 
 Con **SSLCertificateKeyFile** le digo en que ubicación se encuentra la clave pública.
 
-![](/Practica-01-04/images/VIRTUALHOSThttps.png)
+![](images/VIRTUALHOSThttps.png)
 
 ### 3.3 Copiado del VirtualHost con SSL hacia /etc/apache2/sites-available
 
@@ -150,7 +150,7 @@ a2enmod ssl
 
 El archivo **000-default.conf** estará configurado de tal forma que permita la redirección de **HTTP** hacia **HTTPS**. Se establecen una serie condiciones para evaluar si el trafico es **seguro** o **inseguro**, en caso de ser **inseguro** pasa a la siguiente línea, la cual es ua **expresión regular** que indica que debe empezar por **https://** y seguidamente se indica el **nombre de dominio** y la **URL** mediante variables. 
 
-![](/Practica-01-04/images/000default.png)
+![](images/000default.png)
 
 Para que se aplique dicha redirección habilitamos el modulo **rewrite**:
 
