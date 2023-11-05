@@ -115,7 +115,7 @@ Dentro de la carpeta *conf* tendremos otro archivo que será destinado a la conf
  
 ![](images/ssl.png)
 
-Dentro de este archivo Configuraremos que el **SSL** este habilitado para el VirtualHost mediante **SSLEngine** puesto a **on**. 
+Dentro de este archivo Configuraremos que el **SSL** este habilitado para el VirtualHost mediante **SSLEngine** puesto a **on** 
 
 Mediante el **SSLCertificateFile** se le estaria indicando la ruta donde esta alojado el certificado.
 
