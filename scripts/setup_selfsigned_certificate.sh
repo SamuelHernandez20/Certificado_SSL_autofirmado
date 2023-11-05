@@ -11,7 +11,7 @@ apt update
 
 #apt upgrade -y
 
-# Importamos ele archivo de variables:
+# Importamos el archivo de variables:
 
 source .env
 
