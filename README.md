@@ -1,5 +1,3 @@
-# Practica-01-04
-
 ### Creación y configuración de un certificado SSL/TLS autofirmado | Apache
 
 Para esta practica habráque crear un certificado autofirmado por nosotros, sin una autoridad certificadora (no recomendable), para ello se hará uso de la herramienta ``openssl``. Para crear y configurar dicho proceso habrá que:
